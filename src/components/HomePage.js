@@ -52,8 +52,13 @@ class HomePage extends Component {
     const cartList = [...this.state.cartList]
     cartList.push(product)
     this.setState({cartList})
-
   }
+
+  // removeProductFromCart = (index) => {
+  //   const cartList = [...this.state.cartList]
+  //   cartList.splice(index, 1)
+  //   this.setState({cartList})
+  // }
 
 
 
@@ -91,7 +96,8 @@ class HomePage extends Component {
 
 
           <CartView
-            productList={this.state.cartList} />
+            productList={this.state.cartList} 
+            removeProductFromCart={this.removeProductFromCart}/>
         </div>
       </div>
     )
